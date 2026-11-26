@@ -1,25 +1,31 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function Login(){
-    const [Name, setName] = useState(" ")
-    const [Email, setEmail] = useState(" ")
-    const [Pass, setPass] = useState(" ")
-    const formsubmit = (e)=> {
-        e.preventDefault()
-        console.log("Name: "+Name+"\n"+"Email: "+ Email+"\n"+"Password: "+Pass)
-    }
+  const[email, setEmail] = useState("");
+  const[password, setPassword] = useState("");
+
+  const formSubmit=(e)=>e.preventDefault();
+
+    console.log(email,password)
     return(
-        <div>
-        <div className="text-red-500"> hello </div>
-        <form onSubmit ={ (e)=>formsubmit(e)} >
-            <input type="text" required placeholder="Enter your name" value={Name} onChange={(e) => setName(e.target.value)}></input>
-            <input type="email" required placeholder="Enter your email" value={Email} onChange={(e) => setEmail(e.target.value)}></input>
-            <input type="password" required placeholder="Enter your password" value={Pass} onChange={(e) => setPass(e.target.value)}></input>
-            <button type="submit" >Submit</button>
-        </form>
+        /* <div className="text-blue-500">HI </div>
 
-        </div>
-    )
-
-}
-export default Login
+        <input type="email" required placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <br></br>
+        <input type="password" required placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
+         <br></br>
+        <button type="sumbit" onClick={()=>print()}>sumbit</button>} */
+      <form onSubmit={formSubmit}>
+        <input type="email" required placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <br></br>
+         <br></br>
+        <input type="password" required placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <br></br>
+         <br></br>
+         
+        <button type="submit" onClick={()=>console.log(email,password)}>submit</button>
+        <br></br>
+        {/*}
+        <button type="submit" onClick={console.log(email,password)}>submit</button>*/}
+      </form>)
+} export default Login;
