@@ -26,6 +26,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/settings' element={<Settings/>}/>
       <Route path='/team' element={<Team/>}/> 
+      
       </Routes>
     </BrowserRouter>
   
