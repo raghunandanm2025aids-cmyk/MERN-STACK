@@ -21,24 +21,30 @@ function Login() {
         })
     }
 
-    const handlesubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault()
         console.log(formdata)
         alert("Login successful")
-        navigate("/Dashboard")
-        State(formdata)
+        navigate("/Dashboard",{
+        State:formdata
+    })
     }
 
     return (
         <div>
             <h1>Login Page</h1><br></br>
 
-            <form onSubmit={handlesubmit}>
+            <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Enter username" name="username" onChange={handleChange}/>
                 <br /><br />
                 <input type="password" placeholder="Enter password" name="password" onChange={handleChange} />
                 <br /><br />
-                <button type="submit">Login</button>
+                <button type ="submit">Login</button>
+                
+                
+
+
+
             </form>
         </div>
     )
