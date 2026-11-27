@@ -10,7 +10,7 @@ function Dashboard() {
     return (
         <div>
             <h1>Dashboard</h1>
-            <button type="submit"></button>
+            <button onClick={displaydata}>button</button>
         </div>
     );
 }

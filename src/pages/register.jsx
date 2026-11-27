@@ -14,17 +14,20 @@ function Register(){
         navigate("/")
     }
     return(
+        <div>
+                <h1> Register page </h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder="Enter username" name="username" {...register("name")}/>
                 <p>{errors.name?.message}</p>
                 <input type="password" placeholder="Enter password" name="password" {...register("password")} />
                 <p>{errors.password?.message}</p>
                 <input type="email" placeholder="Enter email" name="email" {...register("email")}/>
-                <p>errors.email?.message</p>
+                <p>{errors.email?.message}</p>
                 <input type="age" placeholder="Enter age" name="age"  {...register("age")}  />
                 <p>{errors.age?.message}</p>
                 <button type ="submit">Login</button>
                 </form>
+        </div>
     )
 }
 export default Register;
